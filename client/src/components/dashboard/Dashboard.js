@@ -6,7 +6,7 @@ import './Dashboard.css';
 import Sidebar from '../sidebar/Sidebar';
 import DCard from './DCard';
 
-const Dashboard = () => {
+const Dashboard = ({blockchain, postcount}) => {
 	const [filterByStatus, setFilterByStatus] = React.useState('1');
 
 	const handleChange = (event) => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
 							Invoices
 						</Typography>
 						<Typography variant="p">
-							There are 7 total invoices
+							There are {postcount} total invoices
 						</Typography>
 					</div>
 					<div className="dashboard__headerRight">

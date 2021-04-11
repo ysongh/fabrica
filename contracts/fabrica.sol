@@ -73,7 +73,7 @@ contract Fabrica is ERC20 {
         currentId++;
         
         // Create a Post and filling id, user, title, content, nbUnlocked, nbLikes and 2 empty arrays for whoUnlocked and whoLiked
-        Post storage newPost = Post(_postId, msg.sender, _postTitle, _postContent, 0, 0, new address[], new address[]);
+        Post memory newPost = Post(_postId, msg.sender, _postTitle, _postContent, 0, 0, new address[](0), new address[](0));
 
         idToPost[_postId] = newPost;
         
